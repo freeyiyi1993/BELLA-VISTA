@@ -47,7 +47,7 @@
 
             // to update singlePageInline content use the following method: this.updateSinglePageInline(yourContent)
             var t = this;
-
+            console.log(url);
             $.ajax({
                 url: url,
                 type: 'GET',
@@ -98,59 +98,59 @@
 
 
     // add listener for load more click
-    $('.cbp-l-loadMore-button-link').on('click', function(e) {
+    // $('.cbp-l-loadMore-button-link').on('click', function(e) {
 
-        e.preventDefault();
+    //     e.preventDefault();
 
-        var clicks, me = $(this), oMsg;
+    //     var clicks, me = $(this), oMsg;
 
-        if (me.hasClass('cbp-l-loadMore-button-stop')) return;
+    //     if (me.hasClass('cbp-l-loadMore-button-stop')) return;
 
-        // get the number of times the loadMore link has been clicked
-        clicks = $.data(this, 'numberOfClicks');
-        clicks = (clicks)? ++clicks : 1;
-        $.data(this, 'numberOfClicks', clicks);
+    //     // get the number of times the loadMore link has been clicked
+    //     clicks = $.data(this, 'numberOfClicks');
+    //     clicks = (clicks)? ++clicks : 1;
+    //     $.data(this, 'numberOfClicks', clicks);
 
-        // set loading status
-        oMsg = me.text();
-        me.text('LOADING...');
+    //     // set loading status
+    //     oMsg = me.text();
+    //     me.text('LOADING...');
 
-        // perform ajax request
-        $.ajax({
-            url: me.attr('href'),
-            type: 'GET',
-            dataType: 'HTML'
-        })
-        .done( function (result) {
-            var items, itemsNext;
+    //     // perform ajax request
+    //     $.ajax({
+    //         url: me.attr('href'),
+    //         type: 'GET',
+    //         dataType: 'HTML'
+    //     })
+    //     .done( function (result) {
+    //         var items, itemsNext;
 
-            // find current container
-            items = $(result).filter( function () {
-                return $(this).is('div' + '.cbp-loadMore-block' + clicks);
-            });
+    //         // find current container
+    //         items = $(result).filter( function () {
+    //             return $(this).is('div' + '.cbp-loadMore-block' + clicks);
+    //         });
 
-            gridContainer.cubeportfolio('appendItems', items.html(),
-                 function () {
-                    // put the original message back
-                    me.text(oMsg);
+    //         gridContainer.cubeportfolio('appendItems', items.html(),
+    //              function () {
+    //                 // put the original message back
+    //                 me.text(oMsg);
 
-                    // check if we have more works
-                    itemsNext = $(result).filter( function () {
-                        return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
-                    });
+    //                 // check if we have more works
+    //                 itemsNext = $(result).filter( function () {
+    //                     return $(this).is('div' + '.cbp-loadMore-block' + (clicks + 1));
+    //                 });
 
-                    if (itemsNext.length === 0) {
-                        me.text('NO MORE WORKS');
-                        me.addClass('cbp-l-loadMore-button-stop');
-                    }
+    //                 if (itemsNext.length === 0) {
+    //                     me.text('NO MORE WORKS');
+    //                     me.addClass('cbp-l-loadMore-button-stop');
+    //                 }
 
-                 });
+    //              });
 
-        })
-        .fail(function() {
-            // error
-        });
+    //     })
+    //     .fail(function() {
+    //         // error
+    //     });
 
-    });
+    // });
 
 })(jQuery, window, document);

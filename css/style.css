@@ -999,10 +999,13 @@ max-width:120px;
 margin:15px 0;
 }
 
-/* PORTFOLIO */
-#portfolio h1 {
+/* restaurant */
+#restaurant h1 {
 text-align:center;
 }
+/*#restaurant h1 img {
+	
+}*/
 
 /* filter */
 .cbp-l-filters-alignCenter .cbp-filter-item {
