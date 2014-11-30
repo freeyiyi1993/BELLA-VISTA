@@ -536,7 +536,7 @@ text-transform:uppercase;
 .about-bg-image-holder {
 background-position: 50% 50% !important;
 background-size: cover !important;
-background: url('../img/about.jpg') repeat scroll 50% 0% transparent;
+background: url('../img/Switzerland.png') no-repeat scroll 50% 0% transparent;
 height: 100%;
 position: absolute;
 top: 0;
@@ -559,6 +559,20 @@ margin:0 0 30px;
 }
 .about-info h1 {
 color: #1a1a1a;
+}
+#tour {
+	min-height: 660px;
+}
+#tour .about-info h1 {
+	margin: 0px;
+padding: 0px;
+}
+#tour .about-info h5 {
+display: inline-block;
+margin-top: 20px;
+}
+#tour .about-info img {
+	width: 180px;
 }
 
 .about-sub-title {
@@ -659,9 +673,9 @@ transition: all 0.3s;
 #cd-team .cruise_text {
 	color: #777;
 padding: 0px 30px;
-font-size: 14px !important;
 }
 .text {
+	font-size: 14px;
 	margin: 0px 0px 0px 20px;
 }
 .no-touch #cd-team li:hover {
@@ -2082,7 +2096,17 @@ width: 100%;
 .about-pad {
 padding:100px 0 100px 20px;
 }
-
+#tour .about-info h1 {
+	margin: 0px;
+padding: 0px;
+}
+#tour .about-info h5 {
+display: inline-block;
+margin-top: 20px;
+}
+#tour .about-info img {
+	width: 180px;
+}
 
 /* PRICING */
 .pricing-pad {
@@ -2096,6 +2120,18 @@ padding: 100px 0 100px 10px;
 /* ABOUT */
 .about-pad {
 padding:100px 0 100px 10px;
+}
+
+#tour .about-info h1 {
+	margin: 0px;
+padding: 0px;
+}
+#tour .about-info h5 {
+display: inline-block;
+margin-top: 20px;
+}
+#tour .about-info img {
+	width: 180px;
 }
 
 /* PORTFOLIO */
@@ -2183,9 +2219,20 @@ text-align:center;
 text-align:center;
 }
 
-/* ABOUT */
+/* tour */
 .about-pad {
 padding:100px 32px 100px;
+}
+#tour .about-info h1 {
+	margin: 0px;
+padding: 0px;
+}
+#tour .about-info h5 {
+display: inline-block;
+margin-top: 20px;
+}
+#tour .about-info img {
+	width: 180px;
 }
 
 .services-pad {
