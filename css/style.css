@@ -946,7 +946,7 @@ color: #fff;
 	margin-top: 2px;
 }
 #hotel .hotel_text{
-	padding: 50px 30px 7px;;
+	padding: 50px 30px 7px;
 	width: 50%;
 	float: left;
 	text-align: justify;
@@ -954,12 +954,17 @@ color: #fff;
 	text-align-last: justify;
 	-moz-text-align-last: justify;
 	-webkit-text-align-last: justify;
+	border: none;
 }
 #hotel .hotel_text h1 {
 	font-size: 34px;
 	border: none;
 	color: #444;
 	padding: 0;
+}
+#hotel .about-sub-title {
+	line-height: 16px;
+font-size: 20px;
 }
 #hotel .hotel_text:after {
 	clear: both;
