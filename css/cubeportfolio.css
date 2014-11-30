@@ -3089,10 +3089,14 @@
     --------------------------------------------------------------- */
 .cbp-l-filters-alignCenter {
     /* @editable properties */
-    margin: 0 auto 50px;
+    /*margin: 0 auto 50px;
     text-align: center;
     font-size: 12px;
-    color: #cacaca;
+    color: #cacaca;*/
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
 }
 
 .cbp-l-filters-alignCenter .cbp-filter-item {
